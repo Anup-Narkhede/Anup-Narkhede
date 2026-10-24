@@ -69,9 +69,11 @@ python tools/build.py signal
 ## How the plates are made to work on GitHub
 
 - **Themes.** Each plate is built twice and swapped with `<picture>` +
-  `prefers-color-scheme`. Links go *inside* `<picture>`, around the `<img>`.
-  Wrapping a `<picture>` in `<a>` makes GitHub's sanitizer pull the `<img>`
-  out, which breaks theme switching.
+  `prefers-color-scheme`. To make a plate clickable, wrap the whole
+  `<picture>` in `<a>`. Never put the `<a>` inside `<picture>`, because the
+  `<img>` must stay a direct child or the dark source is ignored. GitHub's
+  `/markdown` API renders these differently from github.com itself, so verify
+  on the live page.
 - **Fonts.** Each SVG embeds only the glyphs it uses, as base64 WOFF2, so type
   renders identically everywhere (GitHub serves SVGs as isolated images, so
   web fonts can't be loaded any other way). The hero name is converted to

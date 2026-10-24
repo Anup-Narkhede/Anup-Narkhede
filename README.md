@@ -4,10 +4,12 @@
   Light and dark variants are swapped with <picture>; PL. 06 is regenerated weekly by GitHub Actions.
 -->
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/plates/hero-dark.svg">
-  <a href="https://github.com/Anup-Narkhede"><img src="assets/plates/hero-light.svg" width="100%" alt="Anup Narkhede, Cloud DevOps Engineer. An animated title plate: a noisy signal labelled toil, drift and 3 a.m. pages travels into a reconciliation loop of observe, diff and act, and leaves as a steady line. Tagline: Declare it once. Let the loop do the rest."></a>
-</picture>
+<a href="https://github.com/Anup-Narkhede">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/plates/hero-dark.svg">
+    <img src="assets/plates/hero-light.svg" width="100%" alt="Anup Narkhede, Cloud DevOps Engineer. An animated title plate: a noisy signal labelled toil, drift and 3 a.m. pages travels into a reconciliation loop of observe, diff and act, and leaves as a steady line. Tagline: Declare it once. Let the loop do the rest.">
+  </picture>
+</a>
 
 <br>
 
@@ -59,10 +61,12 @@ This page is an atlas of that idea. Each plate is a hand-composed, animated SVG,
 
 Four public repositories, each drawn as the system it builds.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/plates/exhibit-01-dark.svg">
-  <a href="https://github.com/Anup-Narkhede/cloud-native-monitoring-app-code"><img src="assets/plates/exhibit-01-light.svg" width="100%" alt="Exhibit 01, Two-Repo GitOps: ship by commit and let the cluster pull. Animated schematic of an app repository built by Jenkins into an Amazon ECR image, and a manifest repository synced by Argo CD into a Kubernetes cluster."></a>
-</picture>
+<a href="https://github.com/Anup-Narkhede/cloud-native-monitoring-app-code">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/plates/exhibit-01-dark.svg">
+    <img src="assets/plates/exhibit-01-light.svg" width="100%" alt="Exhibit 01, Two-Repo GitOps: ship by commit and let the cluster pull. Animated schematic of an app repository built by Jenkins into an Amazon ECR image, and a manifest repository synced by Argo CD into a Kubernetes cluster.">
+  </picture>
+</a>
 
 > **Problem**&ensp;Clusters changed by hand drift away from what’s in git.<br>
 > **Engineering**&ensp;Application code and Kubernetes manifests live in separate repositories. A Jenkins pipeline builds the Flask + psutil app into a Docker image and pushes it to Amazon ECR, whose repository is created with Boto3. Argo CD watches the manifest repo and syncs the cluster, and Terraform defines the EC2 instance.<br>
@@ -71,10 +75,12 @@ Four public repositories, each drawn as the system it builds.
 
 <br>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/plates/exhibit-02-dark.svg">
-  <a href="https://github.com/Anup-Narkhede/Pinger_App_K8S"><img src="assets/plates/exhibit-02-light.svg" width="100%" alt="Exhibit 02, Pinger: is it up, how fast, ask again forever. Animated radar with two sweeps, version one and version two, lighting up probed targets labelled with latencies and one timeout."></a>
-</picture>
+<a href="https://github.com/Anup-Narkhede/Pinger_App_K8S">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/plates/exhibit-02-dark.svg">
+    <img src="assets/plates/exhibit-02-light.svg" width="100%" alt="Exhibit 02, Pinger: is it up, how fast, ask again forever. Animated radar with two sweeps, version one and version two, lighting up probed targets labelled with latencies and one timeout.">
+  </picture>
+</a>
 
 > **Problem**&ensp;Knowing whether a URL is up, and how fast it answers, all the time rather than only when someone checks.<br>
 > **Engineering**&ensp;Three Node.js services: a frontend, a pinger that loops over URLs recording latency, response code and size, and a details service. Each is containerised and deployed to a local kind cluster with a control plane and three workers, and a build script loads the images straight into the cluster.<br>
@@ -83,10 +89,12 @@ Four public repositories, each drawn as the system it builds.
 
 <br>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/plates/exhibit-03-dark.svg">
-  <a href="https://github.com/Anup-Narkhede/terraform-project-an"><img src="assets/plates/exhibit-03-light.svg" width="100%" alt="Exhibit 03, Modular Terraform: infrastructure assembled from parts. Isometric module slabs; the lambda module is drawn solid as built, and api_gateway, ec2 and memorydb are dashed blueprints marked scaffold. An event travels to the Lambda and on to Slack, a plan line scans the modules, and an S3 state bucket shows a lock."></a>
-</picture>
+<a href="https://github.com/Anup-Narkhede/terraform-project-an">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/plates/exhibit-03-dark.svg">
+    <img src="assets/plates/exhibit-03-light.svg" width="100%" alt="Exhibit 03, Modular Terraform: infrastructure assembled from parts. Isometric module slabs; the lambda module is drawn solid as built, and api_gateway, ec2 and memorydb are dashed blueprints marked scaffold. An event travels to the Lambda and on to Slack, a plan line scans the modules, and an S3 state bucket shows a lock.">
+  </picture>
+</a>
 
 > **Problem**&ensp;One giant Terraform file can’t be reviewed or reused, and unlocked state invites collisions.<br>
 > **Engineering**&ensp;Each service has its own module. The Lambda module is built: an IAM execution role, source packaged with `archive_file` and redeployed on hash change, and environment configuration. The Python handler routes user-removal events to a Slack notifier, which is still a stub. API Gateway, EC2 and MemoryDB modules are scaffolded next to it, drawn as blueprints above.<br>
@@ -95,10 +103,12 @@ Four public repositories, each drawn as the system it builds.
 
 <br>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/plates/exhibit-04-dark.svg">
-  <a href="https://github.com/Anup-Narkhede/Serverless-Web-Application"><img src="assets/plates/exhibit-04-light.svg" width="100%" alt="Exhibit 04, Serverless Web App: nothing to patch, one request path. Animated request travelling from a user through CloudFront and S3 for the static site, then Cognito, API Gateway and Lambda to DynamoDB for the API."></a>
-</picture>
+<a href="https://github.com/Anup-Narkhede/Serverless-Web-Application">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/plates/exhibit-04-dark.svg">
+    <img src="assets/plates/exhibit-04-light.svg" width="100%" alt="Exhibit 04, Serverless Web App: nothing to patch, one request path. Animated request travelling from a user through CloudFront and S3 for the static site, then Cognito, API Gateway and Lambda to DynamoDB for the API.">
+  </picture>
+</a>
 
 > **Problem**&ensp;A full web app with no servers to patch, scale or keep awake.<br>
 > **Engineering**&ensp;Static hosting on S3 behind CloudFront, sign-in with Cognito, and an API Gateway → Lambda backend that writes to DynamoDB, observed with CloudWatch.<br>
@@ -116,10 +126,10 @@ Four public repositories, each drawn as the system it builds.
 </picture>
 
 <p align="center">
-  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/plates/seal-saa-dark.svg"><a href="https://www.credly.com/badges/a3973253-4e95-495b-ba1b-7624ca657d1f"><img src="assets/plates/seal-saa-light.svg" width="23%" alt="AWS Certified Solutions Architect – Associate (SAA), verified on Credly"></a></picture>
-  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/plates/seal-dva-dark.svg"><a href="https://www.credly.com/badges/f3fe5f9d-0427-4d52-8ffe-ceb9cf3baec3"><img src="assets/plates/seal-dva-light.svg" width="23%" alt="AWS Certified Developer – Associate (DVA), verified on Credly"></a></picture>
-  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/plates/seal-clf-dark.svg"><a href="https://www.credly.com/badges/7c20de9c-e554-49bb-b4cc-9921046c1198"><img src="assets/plates/seal-clf-light.svg" width="23%" alt="AWS Certified Cloud Practitioner (CLF), verified on Credly"></a></picture>
-  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/plates/seal-az900-dark.svg"><a href="https://www.credly.com/badges/f98694af-f545-40e4-950b-152a7faff3d4"><img src="assets/plates/seal-az900-light.svg" width="23%" alt="Microsoft Certified: Azure Fundamentals (AZ-900), verified on Credly"></a></picture>
+  <a href="https://www.credly.com/badges/a3973253-4e95-495b-ba1b-7624ca657d1f"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/plates/seal-saa-dark.svg"><img src="assets/plates/seal-saa-light.svg" width="23%" alt="AWS Certified Solutions Architect – Associate (SAA), verified on Credly"></picture></a>
+  <a href="https://www.credly.com/badges/f3fe5f9d-0427-4d52-8ffe-ceb9cf3baec3"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/plates/seal-dva-dark.svg"><img src="assets/plates/seal-dva-light.svg" width="23%" alt="AWS Certified Developer – Associate (DVA), verified on Credly"></picture></a>
+  <a href="https://www.credly.com/badges/7c20de9c-e554-49bb-b4cc-9921046c1198"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/plates/seal-clf-dark.svg"><img src="assets/plates/seal-clf-light.svg" width="23%" alt="AWS Certified Cloud Practitioner (CLF), verified on Credly"></picture></a>
+  <a href="https://www.credly.com/badges/f98694af-f545-40e4-950b-152a7faff3d4"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/plates/seal-az900-dark.svg"><img src="assets/plates/seal-az900-light.svg" width="23%" alt="Microsoft Certified: Azure Fundamentals (AZ-900), verified on Credly"></picture></a>
 </p>
 
 <p align="center"><sub>Each seal links to its Credly verification.</sub></p>
@@ -137,10 +147,12 @@ Four public repositories, each drawn as the system it builds.
 <br>
 <a id="open-channel"></a>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/plates/finale-dark.svg">
-  <a href="https://www.linkedin.com/in/anup-narkhede-3291211ab/"><img src="assets/plates/finale-light.svg" width="100%" alt="Plate 07, Open Channel. The reconciliation loop from the title returns fully converged as a calm signal comes to rest inside it. Text: Let’s build something that runs itself. Open to conversations about cloud platforms, DevOps, SRE and AI-driven automation."></a>
-</picture>
+<a href="https://www.linkedin.com/in/anup-narkhede-3291211ab/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/plates/finale-dark.svg">
+    <img src="assets/plates/finale-light.svg" width="100%" alt="Plate 07, Open Channel. The reconciliation loop from the title returns fully converged as a calm signal comes to rest inside it. Text: Let’s build something that runs itself. Open to conversations about cloud platforms, DevOps, SRE and AI-driven automation.">
+  </picture>
+</a>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/anup-narkhede-3291211ab/"><b>LinkedIn</b></a> &nbsp;·&nbsp;
