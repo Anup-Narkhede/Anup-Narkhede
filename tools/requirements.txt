@@ -1,0 +1,3 @@
+# Plate generation (build.py). brotli enables WOFF2 subsetting.
+fonttools==4.67.0
+brotli==1.2.1
