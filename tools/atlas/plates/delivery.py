@@ -7,7 +7,7 @@ import math
 
 from ..kit import Plate, Theme, anim, header
 
-W, H = 1200, 500
+W, H = 1200, 516
 Y_MAIN, Y_IAC, Y_LOOP = 262, 158, 404
 X0, X1 = 132, 1068
 STEP = (X1 - X0) / 6
@@ -50,8 +50,7 @@ def build(t: Theme) -> Plate:
     p.add(f'<path d="{lap}" stroke="{t.ink3}" stroke-width="2" stroke-dasharray="2 8" stroke-linecap="round" '
           f'style="animation:flow 18s linear infinite"/>')
     lbl = "LOOP ◂ METRICS · ALERTS · POSTMORTEMS → THE NEXT COMMIT"
-    p.add(f'<rect x="{W / 2 - 250}" y="{Y_LOOP - 12}" width="500" height="24" fill="{t.page}"/>')
-    p.t_(W / 2, Y_LOOP + 4.5, lbl, "mono", 12, t.ink3, anchor="middle", ls=0.12)
+    p.t_(W / 2, Y_LOOP + 26, lbl, "mono", 12, t.ink3, anchor="middle", ls=0.12)
 
     # line 2: infrastructure as code
     xs = [X0 + i * STEP for i in range(7)]
